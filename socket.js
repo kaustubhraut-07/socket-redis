@@ -66,7 +66,7 @@ io.on('connection', (socket) => {
 
   socket.on('message', (data) => {
     console.log('Received message:', data);
-    io.emit('message', data); // Broadcast the message to all connected clients
+    io.emit('message', data); 
   });
 
   socket.on('disconnect', () => {
@@ -92,7 +92,7 @@ let pubClient, subClient;
     console.log(`Server listening on port ${port}`);
   });
 
-  // Graceful shutdown
+  
   process.on('SIGINT', async () => {
     console.log('SIGINT signal received.');
     await shutdown();
