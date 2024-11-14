@@ -1,8 +1,18 @@
 {
+  "name": "your-app-name",
+  "version": "1.0.0",
+  "main": "socket.js",
+  "scripts": {
+    "start": "node socket.js",
+    "start:4000": "cross-env PORT=4000 node socket.js",
+    "start:4001": "cross-env PORT=4001 node socket.js"
+  },
   "dependencies": {
     "@socket.io/redis-adapter": "^8.3.0",
+    "cross-env": "^7.0.3",
     "express": "^4.21.1",
     "redis": "^4.7.0",
-    "socket.io": "^4.8.1"
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1"
   }
 }
